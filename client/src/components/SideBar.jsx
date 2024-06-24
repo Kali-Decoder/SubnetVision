@@ -4,7 +4,7 @@ import logo from "../../public/assets/logo.png";
 import IconButton from "./IconButton";
 import Image from "./Image";
 
-import SidebarIcons from "./SideBarIcons";
+import SidebarIcons from "./SidebarIcons";
 import { useDataContext } from "../context/DataContext";
 function MenuItem({ item: { id, title, notifications }, onClick, selected }) {
   return (
