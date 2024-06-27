@@ -2,8 +2,9 @@ import Icon from "../Icon";
 import IconButton from "../IconButton";
 import NameCard from "./NameCard";
 import Graph from "./Graph";
-import TopCountries from "./TopCountries";
+import Teleporters from "./Teleporters";
 import Segmentation from "./Segmentation";
+import SubnetCard from "./SubnetCard";
 import Satisfication from "./Satisfication";
 import AddComponent from "./AddComponent";
 import { useState } from "react";
@@ -39,12 +40,111 @@ const employeeData = [
     tasksCompleted: 1,
     imgId: 3,
   },
+  {
+    id: 3,
+    name: "Robert Fox",
+    position: "Sale's manager Asia",
+    transactions: 2600,
+    rise: true,
+    tasksCompleted: 1,
+    imgId: 3,
+  },
+  {
+    id: 3,
+    name: "Robert Fox",
+    position: "Sale's manager Asia",
+    transactions: 2600,
+    rise: true,
+    tasksCompleted: 1,
+    imgId: 3,
+  },
+  {
+    id: 3,
+    name: "Robert Fox",
+    position: "Sale's manager Asia",
+    transactions: 2600,
+    rise: true,
+    tasksCompleted: 1,
+    imgId: 3,
+  },
+];
+
+const subnetsCreated = [
+  {
+    id: 1,
+    name: "Subnet 1",
+    transactions: 3490,
+    rise: true,
+    chainType: "C-Chain",
+  },
+  {
+    id: 2,
+    name: "Subnet 2",
+    transactions: 590,
+    rise: false,
+    chainType: "X-Chain",
+  },
+  {
+    id: 3,
+    name: "Subnet 3",
+    transactions: 1230,
+    rise: true,
+    chainType: "P-Chain",
+  },
+  {
+    id: 4,
+    name: "Subnet 4",
+    transactions: 4020,
+    rise: false,
+    chainType: "C-Chain",
+  },
+  {
+    id: 5,
+    name: "Subnet 5",
+    transactions: 2780,
+    rise: true,
+    chainType: "X-Chain",
+  },
+  {
+    id: 6,
+    name: "Subnet 6",
+    transactions: 670,
+    rise: false,
+    chainType: "P-Chain",
+  },
+  {
+    id: 7,
+    name: "Subnet 7",
+    transactions: 4890,
+    rise: true,
+    chainType: "C-Chain",
+  },
+  {
+    id: 8,
+    name: "Subnet 8",
+    transactions: 3150,
+    rise: false,
+    chainType: "X-Chain",
+  },
+  {
+    id: 9,
+    name: "Subnet 9",
+    transactions: 830,
+    rise: true,
+    chainType: "P-Chain",
+  },
+  {
+    id: 10,
+    name: "Subnet 10",
+    transactions: 1450,
+    rise: false,
+    chainType: "C-Chain",
+  },
 ];
 
 function Content({ onSidebarHide }) {
   const [dropDownShow, setDropDownShow] = useState(false);
-
-  const {selected,setSelectedChain,selectedChain} = useDataContext();
+  const { selected, setSelectedChain, selectedChain } = useDataContext();
   return (
     <div className="flex w-full">
       <div className="w-full h-screen hidden sm:block sm:w-20 xl:w-60 flex-shrink-0"></div>
@@ -53,7 +153,7 @@ function Content({ onSidebarHide }) {
           <div className="sm:flex-grow flex justify-between">
             <div className="">
               <div className="flex items-center">
-                <div className="text-xl font-bold text-white">Nikku.Dev {selected}</div>
+                <div className="text-xl font-bold text-white">Nikku.Dev</div>
                 <div className="flex items-center p-2 px-4 bg-card ml-4 rounded-xl">
                   <div className="relative inline-block text-left">
                     <div>
@@ -92,8 +192,8 @@ function Content({ onSidebarHide }) {
                         <div className="py-1" role="none">
                           <div
                             onClick={() => {
-                              setSelectedChain("X-Chain")
-                              setDropDownShow(false)
+                              setSelectedChain("X-Chain");
+                              setDropDownShow(false);
                             }}
                             className="block px-4 py-2 text-sm text-white cursor-pointer"
                             role="menuitem"
@@ -104,8 +204,8 @@ function Content({ onSidebarHide }) {
                           </div>
                           <div
                             onClick={() => {
-                              setSelectedChain("P-Chain")
-                              setDropDownShow(false)
+                              setSelectedChain("P-Chain");
+                              setDropDownShow(false);
                             }}
                             className="block px-4 py-2 text-sm text-white cursor-pointer"
                             role="menuitem"
@@ -116,8 +216,8 @@ function Content({ onSidebarHide }) {
                           </div>
                           <div
                             onClick={() => {
-                              setSelectedChain("C-Chain")
-                              setDropDownShow(false)
+                              setSelectedChain("C-Chain");
+                              setDropDownShow(false);
                             }}
                             className="block px-4 py-2 text-sm text-white cursor-pointer"
                             role="menuitem"
@@ -140,79 +240,102 @@ function Content({ onSidebarHide }) {
             />
           </div>
         </div>
-        <div className="flex w-full mt-4">
-          <div className="w-1/2 sm:w-50  mb-4 ml-1 sm:mt-0 relative">
-            <Icon
-              path="res-react-dash-search"
-              className="w-5 h-5 search-icon left-3 absolute"
-            />
-            <form action="#" method="POST">
-              <input
-                type="text"
-                name="company_website"
-                id="company_website"
-                className="pl-12 py-4  pr-2 block w-full rounded-lg border-gray-300 bg-card"
-                placeholder="Search all Subnets for tx hash, block ID, address, token, etc…"
-              />
-            </form>
-          </div>
-        </div>
-        <div className="flex w-full mt-0">
-
-          <Table/>
-        </div>
-        {employeeData.map(
-          ({
-            id,
-            name,
-            position,
-            transactions,
-            rise,
-            tasksCompleted,
-            imgId,
-          }) => (
-            <NameCard
+        {selected == "0" && (
+          <>
+            <div className="flex w-full mt-4">
+              <div className="w-1/2 sm:w-50  mb-4 ml-1 sm:mt-0 relative">
+                <Icon
+                  path="res-react-dash-search"
+                  className="w-5 h-5 search-icon left-3 absolute"
+                />
+                <form action="#" method="POST">
+                  <input
+                    type="text"
+                    name="company_website"
+                    id="company_website"
+                    className="pl-12 py-4  pr-2 block w-full rounded-lg border-gray-300 bg-card"
+                    placeholder="Search all Subnets for tx hash, block ID, address, token, etc…"
+                  />
+                </form>
+              </div>
+            </div>
+            <div className="flex w-full mt-0">
+              <Table />
+            </div>
+          </>
+        )}
+        {selected == "1" &&
+          subnetsCreated.map(({ id, name, transactions, rise, chainType }) => (
+            <SubnetCard
               key={id}
               id={id}
               name={name}
-              position={position}
+              chainType={chainType}
               transactionAmount={transactions}
               rise={rise}
-              tasksCompleted={tasksCompleted}
-              imgId={imgId}
             />
-          )
+          ))}
+
+        {selected == "2" && (
+          <>
+            {employeeData.map(
+              ({
+                id,
+                name,
+                position,
+                transactions,
+                rise,
+                tasksCompleted,
+                imgId,
+              }) => (
+                <NameCard
+                  key={id}
+                  id={id}
+                  name={name}
+                  position={position}
+                  transactionAmount={transactions}
+                  rise={rise}
+                  tasksCompleted={tasksCompleted}
+                  imgId={imgId}
+                />
+              )
+            )}
+          </>
         )}
 
-        <div className="w-full p-2 lg:w-2/3">
-          <div className="rounded-lg bg-card sm:h-80 h-60">
-            <Graph />
-          </div>
-        </div>
-        <div className="w-full p-2 lg:w-1/3">
-          <div className="rounded-lg bg-card h-80">
-            <TopCountries />
-          </div>
-        </div>
-
-        <div className="w-full p-2 lg:w-1/3">
-          <div className="rounded-lg bg-card h-80">
-            <Segmentation />
-          </div>
-        </div>
-        <div className="w-full p-2 lg:w-1/3">
-          <div className="rounded-lg bg-card h-80">
-            <Satisfication />
-          </div>
-        </div>
-        <div className="w-full p-2 lg:w-1/3">
-          <div className="rounded-lg bg-card overflow-hidden h-80">
-            <AddComponent />
-          </div>
-        </div>
+        {selected == "3" && (
+          <>
+          <div className="w-full p-2 lg:w-1/1">
+              <div className="rounded-lg bg-card h-80">
+                <Teleporters />
+              </div>
+            </div>
+          </>
+        )}
+        {selected == "4" && (
+          <>
+            <div className="w-full p-2 lg:w-1/1">
+              <div className="rounded-lg bg-card sm:h-80 h-60">
+                <Graph />
+              </div>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
 }
 
 export default Content;
+{
+  /* <div className="w-full p-2 lg:w-2/3">
+              <div className="rounded-lg bg-card sm:h-80 h-60">
+                <Graph />
+              </div>
+            </div>
+            <div className="w-full p-2 lg:w-1/3">
+              <div className="rounded-lg bg-card h-80">
+                <TopCountries />
+              </div>
+            </div> */
+}

@@ -1,6 +1,6 @@
 "use client";
 import logo from "../../public/assets/logo.png";
-
+import { FaEye } from "react-icons/fa6";
 import IconButton from "./IconButton";
 import Image from "./Image";
 
@@ -29,14 +29,14 @@ function Sidebar({ onSidebarHide, showSidebar }) {
   const sidebarItems = [
     [
       { id: "0", title: "Home", notifications: false },
-      { id: "1", title: "Subnets", notifications: false },
+      { id: "1", title: "Subnets", notifications: 10 },
       { id: "2", title: "Validators", notifications: 6 },
-      { id: "3", title: "Teleporter", notifications: false },
+      { id: "3", title: "Teleporter", notifications: 3 },
     ],
     [
       { id: "4", title: "Stats", notifications: false },
-      { id: "5", title: "Tools", notifications: false },
-      { id: "6", title: "Settings", notifications: false },
+      { id: "5", title: "Tools", notifications: 3 },
+      { id: "6", title: "Settings", notifications: 1 },
     ],
   ];
   const {selected,setSelected} = useDataContext();
@@ -47,7 +47,7 @@ function Sidebar({ onSidebarHide, showSidebar }) {
     >
       <div className="flex-shrink-0 overflow-hidden p-2">
         <div className="flex items-center h-full sm:justify-center xl:justify-start p-2 sidebar-separator-top">
-          <img src={logo} alt="logo" className="w-8 h-8" />
+          <FaEye size={30} color="white" />
           <div className="block sm:hidden xl:block ml-2 font-bold text-xl text-white">
             Subnet Vision
           </div>

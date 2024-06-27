@@ -58,9 +58,9 @@ function Graph() {
           <div className="font-bold ml-5">Nov - July</div>
         </div>
   
-        <div className="flex-grow">
+        <div className="flex-grow" >
           <ResponsiveContainer width="100%" height="100%">
-            <LineChart width={500} height={300} data={graphData}>
+            <LineChart width={500} height={500} data={graphData}>
               <defs>
                 <linearGradient id="paint0_linear" x1="0" y1="0" x2="1" y2="0">
                   <stop stopColor="#6B8DE3" />

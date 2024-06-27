@@ -8,14 +8,14 @@ const Countrydata = [
 
   import Image from "../Image";
   
-function TopCountries() {
+function Teleporters() {
     return (
       <div className="flex p-4 flex-col h-full">
         <div className="flex justify-between items-center">
-          <div className="text-white font-bold">Top Countries</div>
+          <div className="text-white text-3xl font-bold">Your Teleporters</div>
           <Icon path="res-react-dash-plus" className="w-5 h-5" />
         </div>
-        <div className="">favourites</div>
+        <div className="mt-8 uppercase">Transactions</div>
         {Countrydata.map(({ name, rise, value, id }) => (
           <div className="flex items-center mt-3" key={id}>
             <div className="">{id}</div>
@@ -34,12 +34,10 @@ function TopCountries() {
           </div>
         ))}
         <div className="flex-grow" />
-        <div className="flex justify-center">
-          <div className="">Check All</div>
-        </div>
+       
       </div>
     );
   }
 
   
-  export default TopCountries;
+  export default Teleporters;

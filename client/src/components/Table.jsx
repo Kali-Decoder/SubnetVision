@@ -66,9 +66,9 @@ const Table = () => {
               </thead>
 
               <tbody className="lg:border-gray-300 overflow-scroll">
-                {transactions.map((transaction) => {
+                {transactions.map((transaction,i) => {
                   return (
-                    <tr className="">
+                    <tr className="" key={i}>
                       <td className="whitespace-no-wrap py-4 text-sm  text-blue-400 sm:px-6">
                         {transaction?.txHash}
                       </td>
