@@ -1,12 +1,16 @@
 import { animated, useSpring } from "react-spring";
 import Icon from "../Icon";
-
+import { useDataContext } from "../../context/DataContext";
 function SubnetCard({ id, name, transactionAmount,chainType }) {
   const { transactions, barPlayhead } = useSpring({
     transactions: transactionAmount,
     barPlayhead: 1,
     from: { transactions: 0, barPlayhead: 0 },
   });
+
+  const {selectedChain} = useDataContext();
+  console.log(selectedChain,"Selected Chain");
+
   return (
     <div className="w-full p-2 lg:w-1/3">
       <div className="rounded-lg bg-card flex justify-between p-3 h-auto">
@@ -19,7 +23,6 @@ function SubnetCard({ id, name, transactionAmount,chainType }) {
               </div>
             </div>
           </div>
-
           <svg
             className="w-44 mt-3"
             height="6"

@@ -305,8 +305,25 @@ function Content({ onSidebarHide }) {
 
         {selected == "3" && (
           <>
+          <div className="flex w-full mt-4 justify-center">
+              <div className="w-1/2 sm:w-50  mb-4 ml-1 sm:mt-0 relative">
+                <Icon
+                  path="res-react-dash-search"
+                  className="w-5 h-5 search-icon left-3 absolute"
+                />
+                <form action="#" method="POST">
+                  <input
+                    type="text"
+                    name="company_website"
+                    id="company_website"
+                    className="pl-12 py-4  pr-2 block w-full rounded-lg border-gray-300 bg-card"
+                    placeholder="Search all Subnets for tx hash, block ID, address, token, etc…"
+                  />
+                </form>
+              </div>
+            </div>
           <div className="w-full p-2 lg:w-1/1">
-              <div className="rounded-lg bg-card h-80">
+              <div className="rounded-lg bg-card h-full">
                 <Teleporters />
               </div>
             </div>
@@ -315,7 +332,7 @@ function Content({ onSidebarHide }) {
         {selected == "4" && (
           <>
             <div className="w-full p-2 lg:w-1/1">
-              <div className="rounded-lg bg-card sm:h-80 h-60">
+              <div className="rounded-lg bg-card h-[100vh]">
                 <Graph />
               </div>
             </div>
