@@ -20,12 +20,12 @@ import Icon from "../Icon";
     "July",
   ].map((i) => {
     const revenue = 500 + Math.random() * 2000;
-    const expectedRevenue = Math.max(revenue + (Math.random() - 0.5) * 2000, 0);
+    const expectedRevenue = Math.max(revenue + (Math.random() - 0.5) * 100, 0);
     return {
       name: i,
       revenue,
       expectedRevenue,
-      sales: Math.floor(Math.random() * 500),
+      sales: Math.floor(Math.random() * 100),
     };
   });
   
@@ -38,6 +38,8 @@ function Graph() {
         </div>
         <div className="tooltip-body text-center p-3">
           <div className="text-white font-bold">$1200</div>
+          <div className="text-white font-bold">0xabcde12345thb</div>
+          
           <div className="">Amount Spend in this TRX</div>
         </div>
       </div>
@@ -55,7 +57,7 @@ function Graph() {
               ?
             </div>
           </div>
-          <div className="font-bold ml-5">Transactions</div>
+          <div className="font-bold ml-5 mt-20">Transactions</div>
         </div>
   
         <div className="flex-grow mt-10" >

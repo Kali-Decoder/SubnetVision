@@ -1,6 +1,6 @@
 "use client";
-import AppComponent from "@/components/AppComponent";
-import DataContextProvider from "@/context/DataContext";
+import AppComponent from "../components/AppComponent";
+import DataContextProvider from "../context/DataContext";
 export default function Home() {
   return (
     <DataContextProvider>

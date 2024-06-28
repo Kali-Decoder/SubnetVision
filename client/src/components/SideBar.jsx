@@ -31,7 +31,7 @@ function Sidebar({ onSidebarHide, showSidebar }) {
       { id: "0", title: "Home", notifications: false },
       { id: "1", title: "Subnets", notifications: 10 },
       { id: "2", title: "Validators", notifications: 6 },
-      { id: "3", title: "Teleporter", notifications: 3 },
+      { id: "3", title: "Teleporter", notifications: 10 },
     ],
     [
       { id: "4", title: "Stats", notifications: false },

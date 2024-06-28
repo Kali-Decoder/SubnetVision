@@ -8,7 +8,7 @@ import SubnetCard from "./SubnetCard";
 import Satisfication from "./Satisfication";
 import AddComponent from "./AddComponent";
 import { useState } from "react";
-import { useDataContext } from "@/context/DataContext";
+import { useDataContext } from "../../context/DataContext";
 import Table from "../Table";
 const employeeData = [
   {
@@ -338,21 +338,18 @@ function Content({ onSidebarHide }) {
             </div>
           </>
         )}
+        {selected == "5" && <>
+          <div className="flex gap-x-10">
+          <Segmentation />
+          <Satisfication/>
+          <AddComponent/>
+          </div>
+         
+       
+        </>}
       </div>
     </div>
   );
 }
 
 export default Content;
-{
-  /* <div className="w-full p-2 lg:w-2/3">
-              <div className="rounded-lg bg-card sm:h-80 h-60">
-                <Graph />
-              </div>
-            </div>
-            <div className="w-full p-2 lg:w-1/3">
-              <div className="rounded-lg bg-card h-80">
-                <TopCountries />
-              </div>
-            </div> */
-}

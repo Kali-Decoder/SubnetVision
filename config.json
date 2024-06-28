@@ -1,0 +1,1 @@
+{"subnetName":"create","vmOption":"Subnet-EVM","subnetEvmVersion":"Use latest version","subnetChainId":"31","tokenSymbol":"TDK","feesOption":"Low disk use","fundDistribution":"Customize your airdrop","customPrecompile":true,"runAmwRelayer":true,"network":"Devnet"}
