@@ -26,7 +26,7 @@ function NameCard({
                 <div className="mr-2 font-bold text-white">{name}</div>
                 <Icon path="res-react-dash-tick" />
               </div>
-              <div className="text-sm ">{position}</div>
+   
             </div>
           </div>
 

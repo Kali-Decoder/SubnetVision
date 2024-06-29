@@ -12,6 +12,11 @@ body{
   background-color: #1e1e1e;
 }
 
+.fixed-size {
+  height: 170px;
+  flex-shrink: 0;
+}
+
 .bg-card{
   background-color:#171717;
 }

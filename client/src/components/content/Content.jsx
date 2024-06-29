@@ -135,8 +135,8 @@ const subnetsCreated = [
   },
   {
     id: 10,
-    name: "Subnet 10",
-    transactions: 1450,
+    name: "nikku-subnet",
+    transactions: 4,
     rise: false,
     chainType: "C-Chain",
   },

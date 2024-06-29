@@ -131,7 +131,7 @@ function Teleporters() {
             return (
               <tr className="" key={i}>
                 <td className="whitespace-no-wrap py-4 text-xs   text-blue-400 sm:px-6">
-                  {transaction?.teleporterMessageId?.slice(0, 10)}...
+                  <a href="http://localhost:3000/create/teleporter/0x253b2784c75510dD0fF1da844684a1aC0aa5fcf" target="_blank">{transaction?.teleporterMessageId?.slice(0, 10)}...</a>
                 </td>
 
                 <td className="whitespace-no-wrap hidden py-4 text-xs  font-normal text-blue-400 sm:px-6 lg:table-cell">

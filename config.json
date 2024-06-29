@@ -1,1 +1,1 @@
-{"subnetName":"create","vmOption":"Subnet-EVM","subnetEvmVersion":"Use latest version","subnetChainId":"31","tokenSymbol":"TDK","feesOption":"Low disk use","fundDistribution":"Customize your airdrop","customPrecompile":true,"runAmwRelayer":true,"network":"Devnet"}
+{"subnetName":"create","vmOption":"Subnet-EVM","subnetEvmVersion":"Use latest version","subnetChainId":"31","tokenSymbol":"NDK","feesOption":"Low disk use","fundDistribution":"Airdrop 1 million tokens to Default Address","customPrecompile":true,"runAmwRelayer":true,"network":"Devnet"}
